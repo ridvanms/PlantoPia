@@ -1,0 +1,26 @@
+<section class="account-section">
+    <div class="accountNav">
+        <div class="leftPart_accNav">
+
+            <a href="#">OrderHistory</a>
+            <a routerLink="/user/account">MyAccount</a>
+        </div>
+        <div class="rightPart_accNav">
+            <button (click)="onLogOut()">LogOut</button>
+        </div>
+    </div>
+    <div class="account">
+        <div class="welcome">
+            <h3>Welcome Back,</h3>
+            <h1><i>{{name}} </i> </h1>
+        </div>
+        <div>
+
+            <img class="avatar" src="https://cdn3.vectorstock.com/i/1000x1000/54/17/person-gray-photo-placeholder-man-vector-24005417.jpg" alt="avatar">
+        </div>
+        <div class="orders">
+            <h1>Orders:</h1>
+            <input type="text" disabled="true" value="0">
+        </div>
+    </div>
+</section>

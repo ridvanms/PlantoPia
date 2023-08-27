@@ -1,0 +1,10 @@
+<app-navigation></app-navigation>
+<div *ngIf="this.global_loader.isLoading;else routerContent">
+    <app-global-loader></app-global-loader>
+</div>
+<ng-template #routerContent>
+    <router-outlet></router-outlet>
+</ng-template>
+
+<app-footer></app-footer>
+<!-- some comment here  -->

@@ -1,0 +1,1 @@
+export const KEY = 'sk-gs5E64c24b132abcf1691'

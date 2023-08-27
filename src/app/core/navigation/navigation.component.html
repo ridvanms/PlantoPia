@@ -1,0 +1,360 @@
+<header >
+    <div class="nav" >
+        <div class="upperPart">
+            <a class="logo" routerLink='/'>
+                <div class="content">
+                    <h2>Plantopia</h2>
+                    <h2>Plantopia</h2>
+                </div>
+            </a>
+            <ul>
+                <li class="storeLocator" *ngIf="!isBrowserSizeSmall()" >
+                    <a href="#">
+                        <i>
+                            Store Locator
+                        </i>
+                        </a>
+                </li>
+                <!-- <li  >
+                    <a href="#" style="display: flex;flex-direction: row;align-items: center;">
+                        <div style="display:flex;align-items:  center">
+                            <div style="width:1.5em;height:1.5em;margin:3px">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div *ngIf="isBrowserSizeSmall()">
+                            <i>Search</i>
+                        </div>
+                        <div  style="display: flex;flex-direction: column;" *ngIf="!isBrowserSizeSmall()" >
+                            <i>Find Product</i>
+                            <span >Quick Search</span>
+                        </div>
+                     </a>
+                </li> -->
+                <li *ngIf="!isBrowserSizeSmall()">
+                    <a routerLink="/user/account">Hello,
+                        <i *ngIf="this.authService.isAuth();else isNotAuth">{{name}}</i>
+                        <ng-template #isNotAuth>
+                            <i>SignIn</i>
+                        </ng-template>
+                    </a>
+                    <span>My Account</span>
+                </li>
+                <li *ngIf="isBrowserSizeSmall()">
+                    <a routerLink="/user/account">
+                        <div style="width: 2em;height: 2em;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" class="feather feather-user">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li >
+                    <a style="font-size: x-large;"  >
+                        <!--  -->
+                            <button  type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight1"
+                                aria-controls="offcanvasRight1">
+                                <h1>🛒</h1>
+                            </button>
+                            
+                            <div  class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight1" aria-labelledby="offcanvasRightLabel1">
+                                <div class="offcanvas-header ">
+                                    <h5 class="offcanvas-title color-w" id="offcanvasRightLabel1"></h5>
+                                    <button style="margin:1em;font-size: x-large;" type="button" class="btn btn-second" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                                </div>
+                                <div class="offcanvas-body cartBody" style="margin:1em" >
+                                    <div class="cartBody">
+                                        <div class="cartTitle">
+                                            <h1>your cart</h1>
+                                        </div>
+                                        <div class="subtotals">
+                                            <i>Subtotals:</i>
+                                            <i>Price <span>$</span></i>
+                                        </div>
+                                        <div class="shipping">
+                                            <i>Shipping:</i>
+                                            <i>Free</i>
+                                        </div>
+                                        <input type="button" value="Your Cart is Empty`" disabled="true" >
+                                        <span style="margin-top:2em;">Taxes calculated at checkout</span>
+                                    </div>
+                                </div>
+                            
+                            </div>
+                        <!--  -->
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ! ⬆️ -->
+        <hr>
+        <!-- ! ⬇️ -->
+        <div class="downPart " [ngClass]="{'bg-common-gray':isBrowserSizeSmall()}">
+            <div class="inSmallScreen">
+
+                <button class="shopMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                    aria-controls="offcanvasExample">
+                    <div style="height: 25px;width:25px">
+                        <svg class="hamburger-icon" viewBox="0 0 24 24">
+                            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h1>Shop</h1>
+                    </div>
+                </button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header  bg-green">
+                        <h5 style="margin:1em;font-size: x-large;" class="offcanvas-title color-w" id="offcanvasExampleLabel">Shop</h5>
+                        <button style="margin:1em;font-size: x-large;" type="button"  class="color-w" data-bs-dismiss="offcanvas" aria-label="">X</button>
+                    </div>
+                    <div class="offcanvas-body fromShopMenu">
+                        <ul>
+                            <li>
+                                <a href="#">Deals</a>
+                            </li>
+                            <li>
+                                <a href="#">Stores</a>
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Planters</a>
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a routerLink="/plantGuide">Plant Guide</a>
+                                
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Gift Ideas</a> 
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Home & Decor</a>
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Faux</a>
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Flowers & Bouquets</a>
+                                <svg data-v-0bc244ea="" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.5312 5.34375L10.2375 3.80625C10.125 3.675 9.91873 3.65625 9.76873 3.76875C9.63748 3.88125 9.61873 4.0875 9.73123 4.2375L10.95 5.68125H0.562476C0.374976 5.68125 0.224976 5.83125 0.224976 6.01875C0.224976 6.20625 0.374976 6.35625 0.562476 6.35625H10.95L9.73123 7.8C9.61873 7.93125 9.63748 8.1375 9.76873 8.26875C9.82498 8.325 9.89998 8.34375 9.97498 8.34375C10.0687 8.34375 10.1625 8.30625 10.2187 8.23125L11.5125 6.69375C11.85 6.28125 11.85 5.71875 11.5312 5.34375Z"
+                                        fill="#2D2A24"></path>
+                                </svg>
+                            </li>
+                            <li>
+                                <a href="#">Subscriptions</a>
+                                
+                            </li>
+                            <li>
+                                <a href="#">Workshops</a>
+                               
+                            </li>
+                            
+                        </ul>
+                        <div class="d-flex justify-content-s-a  " style="width:100%;margin-top:2em;margin-bottom:2em">
+                           <button style="height:3em"  class="btn bg-green">My Account</button>
+                           
+                            <button style="height: 3em;" class="btn btn-second">Store Locator</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ! -->
+               
+                <button class="resourcesMenu" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                    aria-controls="offcanvasRight"><h1>🌱Resources</h1></button>
+                
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header bg-green">
+                        <h5 style="margin:1em;font-size: x-large;" class="offcanvas-title color-w" id="offcanvasRightLabel">Help & Resources</h5>
+                        <button style="margin:1em;font-size: x-large;" type="button" class=" color-w" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+                    </div>
+                    <div class="offcanvas-body fromResourceMenu">
+                        <ul>
+                                <h1>Plant Guide</h1>
+                                <h1>Resources</h1>
+                            
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M12 2C8.13 2 5 5.13 5 9c0 4.28 6 13 6 13s6-8.72 6-13c0-3.87-3.13-7-7-7z" />
+                                        <circle cx="12" cy="10" r="2.5" fill="white" />
+                                    </svg>
+                                    <div>
+                                        <h5>Store Locator</h5>
+                                        <span>
+                                            <i>Visit us in one of our shops</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+
+                                        <h5>Find Your Match</h5>
+                                        <span>
+                                            <i>Take this quiz to find your plant match</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>Plant Guide Library</h5>
+                                        <span>
+                                            <i>Care guides for all your plants, A to Z</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>Blog & Resources</h5>
+                                        <span>
+                                            <i>Plants 101, common care questions, & more</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                                <h1>Customer Service</h1>
+                                <h1>Help</h1>
+                            
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>30-Day Guarantee</h5>
+                                        <span>
+                                            <i>Your plants will arrive in happy, healthy condition-guaranteed</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>Shipping & Handling</h5>
+                                        <span>
+                                            <i>Delivery Estimates and Shipping Cutoffs</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>Frequently Asked</h5>
+                                        <span>
+                                            <i>Answers to common questions</i>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div>
+                                        <h5>Contact Us</h5>
+                                        <span>
+                                            <i>Live Chat: Monday-Friday</i>
+                                            <p>9am-9pmET</p>
+                                        </span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                                        stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 12h14M12 8l4 4-4  4" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                   
+                </div>
+            </div>
+            
+            <!-- NOTE ⬇️ -->
+            <div class="inBigScreen">
+                <ul>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li><a href="#">Planters</a></li>
+                    <li><a routerLink="plantGuide">Plant Guide</a></li>
+                    <li><a href="#">Gift Ideas</a> </li>
+                    <li><a href="#">Home & Decor</a></li>
+                    <li><a href="#">Faux</a></li>
+                    <li><a href="#">Flowers & Bouquets</a></li>
+                    <li><a href="#">Subscriptions</a></li>
+                    <li><a href="#">Workshops</a></li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</header>

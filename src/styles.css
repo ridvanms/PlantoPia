@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+h1{
+    font-variant: small-caps;
+}
+/* @font-face{
+    font-family: Hustine;
+    src:url('./assets/fonts/Hustine.ttf')
+}
+@font-face{
+    font-family: BestonIT;
+    src:url("./assets/fonts/Beston - Backup.ttf")
+} */
+body{
+    background-color: #96969623;
+}
+h2{
+    color: #f1f1f1;
+}

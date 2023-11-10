@@ -1,0 +1,29 @@
+<div  class="bg-white detailPlant">
+  <div
+    class="mx-auto grid max-w-1xl grid-cols-1  items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8">
+    <div class="grid grid-cols-1 grid-rows-1 gap-4 sm:gap-6 lg:gap-8">
+      <img [src]="data?.default_image?.regular_url"
+        class=" ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+    </div>
+    <div class="text-left">
+      <h2 class="text-3xl font-bold  tracking-tight text-gray-900 sm:text-4xl">{{ data?.["common_name"] }}</h2>
+      <p class="mt-4 text-gray-500">{{data?.description}}.</p>
+      
+      <dl class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-1 sm:gap-y-16 lg:gap-x-8">
+        <div class="border-t border-gray-200 pt-4">
+          <dt class="font-medium text-gray-900"><mat-icon>autorenew</mat-icon>Cycle: {{data?.cycle}}</dt>
+          <dt class="font-medium text-gray-900">💧Watering: {{data?.watering}}</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>landscape</mat-icon> Propagation: {{data?.propagation}}</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>map</mat-icon>Hardiness Zone: </dt>
+          <dt class="font-medium text-gray-900"><mat-icon>wb_sunny</mat-icon>Sun</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>local_florist</mat-icon>Leaf: </dt>
+          <dt class="font-medium text-gray-900"><mat-icon>gesture</mat-icon>Cones: {{data?.cones}}</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>trending_up</mat-icon>Growth Rate: {{data?.growth_rate}}</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>control_point</mat-icon>Care Level: {{data?.care_level}}</dt>
+          <dt class="font-medium text-gray-900"><mat-icon>local_dining</mat-icon>Edible: {{data?.["edible_leaf"]}}</dt>
+         </div>
+       
+      </dl>
+    </div>
+    
+</div>

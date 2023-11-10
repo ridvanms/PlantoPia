@@ -16,6 +16,9 @@ import { ModalService } from './shared/modal/modal.service';
 import {HttpClientModule} from "@angular/common/http"
 import { HomeModule } from './home/home.module';
 import { PlantGuideModule } from './plant-guide/plant-guide.module';
+import { ApiServiceService } from './Services/api-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,12 +35,13 @@ import { PlantGuideModule } from './plant-guide/plant-guide.module';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     HttpClientModule,
-    HomeModule,
-    PlantGuideModule
+    PlantGuideModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     AuthService,
-    ModalService
+    ModalService,
+    ApiServiceService
   ],
   bootstrap: [AppComponent]
 })

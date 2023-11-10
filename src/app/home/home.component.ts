@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from './home.service';
+import { ApiServiceService } from '../Services/api-service.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +10,10 @@ export class HomeComponent implements OnInit {
   species:any;
 
   constructor(
-    private homeService:HomeService
+    private apiService:ApiServiceService
   ){}
   ngOnInit(): void {
-    this.homeService.getAllSpecies().subscribe({
+    this.apiService.getAllSpecies().subscribe({
       next:(response)=>{
         this.species = response
       },

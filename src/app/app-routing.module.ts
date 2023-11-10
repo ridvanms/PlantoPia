@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotfountComponent } from './notfount/notfount.component';
+import { PlantDetailComponent } from './home/plant-detail/plant-detail.component';
 
 const routes: Routes = [
   {
     path:"",
     pathMatch:'full',
     component:HomeComponent
+  },
+  {
+    path: 'detail',
+    component:PlantDetailComponent
   },
   {
     path:'user',

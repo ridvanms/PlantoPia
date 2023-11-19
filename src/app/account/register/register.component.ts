@@ -18,13 +18,20 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
     this.registerForm = new FormGroup({
       email: new FormControl('',[Validators.required]),
-      password:new FormControl('',[Validators.required])
+      password:new FormControl('',[Validators.required]),
+      confirmPassword:new FormControl('',[Validators.required]),
     })
   }
   onSubmit(){
     const email = this.registerForm?.value.email
     const password = this.registerForm?.value.password;
+    const confirmPassword = this.registerForm?.value.confirmPassword;
+
+    if (confirmPassword !== password) {
+      return alert("Passwords do not match");
+    };
     if(this.registerForm.invalid)return alert('Invalid form')
+    
     this.accountService.register(email,password);
   }
 }

@@ -18,6 +18,7 @@ import { HomeModule } from './home/home.module';
 import { PlantGuideModule } from './plant-guide/plant-guide.module';
 import { ApiServiceService } from './Services/api-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   providers: [
     AuthService,
     ModalService,
-    ApiServiceService
+    ApiServiceService,
+    MatSnackBar
   ],
   bootstrap: [AppComponent]
 })

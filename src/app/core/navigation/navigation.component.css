@@ -120,8 +120,6 @@ hr{
     justify-content: center;
     align-items: center;
     
-
-
     width:50%
 }
 .fromShopMenu ul li{
@@ -130,10 +128,9 @@ hr{
     justify-content: space-between;
 
     margin-top: 1.5em;
-
-    height: 2em;
+    
+    height: 2.5em;
     align-items: center;
-    border-bottom: 0.1px solid grey;
 }
 
 .resourcesMenu{
@@ -145,8 +142,6 @@ hr{
 .fromResourceMenu{
     display: flex;
     flex-direction:column;
-
-   
 }
 .fromResourceMenu ul{
     margin: 0.5em;
@@ -320,6 +315,7 @@ span{
 .content h2 {
 	color: transparent;
     font-size: 1.5em;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     left:2em;
 	position: absolute;
 	transform: translate(-50%, -50%);

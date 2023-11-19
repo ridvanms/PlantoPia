@@ -24,7 +24,7 @@ export class PlantDetailComponent implements OnInit{
       // Get the plant by ID  
       this.apiService.getPlantDetail(id).subscribe(data => {
         this.data = data as PlantData
-        console.log(data);
+        // console.log(data);
       })
       })
   }

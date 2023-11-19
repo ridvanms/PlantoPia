@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalService } from './modal.service';
+import { MatSnackBar } from "@angular/material/snack-bar"
 
 @Component({
   selector: 'app-modal',
@@ -9,6 +9,8 @@ import { ModalService } from './modal.service';
 export class ModalComponent {
 
   constructor(
-    public modal:ModalService
-  ){}
+    private snackModal:MatSnackBar
+  ) { }
+  
+
 }

@@ -7,30 +7,17 @@
     </div>
 </section>
 <section class="newArrivals">
-    <!--
-      This example requires some changes to your config:
-      
-      ```
-      // tailwind.config.js
-      module.exports = {
-        // ...
-        plugins: [
-          // ...
-          require('@tailwindcss/aspect-ratio'),
-        ],
-      }
-      ```
-    -->
+   
     <div class="bg-white">
         <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <h2 class="text-2xl font-bold tracking-tight text-gray-900">New Arrivals</h2>
             <!-- More products... -->
             
-            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" >
+            <!-- <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" >
                 <div class="group relative" *ngFor="let specie of species">
                     <div
                         class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
-                        <img [src]="specie.default_image.regular_url"
+                        <img [src]="specie?.default_image?.regular_url"
                             alt="Front of men&#039;s Basic Tee in black."
                             class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                     </div>
@@ -46,9 +33,84 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- More products... -->
+            </div> -->
+
+            <!--~ In testing ⬇️ -->
+            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                <div class="group relative" >
+                    <div
+                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhs8cTZnuzvBwJwC7HgPhN6r-gTVLaQRqd8aTuGPqFA&s" alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a [routerLink]="['detail']" [queryParams]="{id: 2}">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Description
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">watering: frequently</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative" >
+                    <div
+                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhs8cTZnuzvBwJwC7HgPhN6r-gTVLaQRqd8aTuGPqFA&s" alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a [routerLink]="['detail']" [queryParams]="{id: 2}">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Description
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">watering: frequently</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative" >
+                    <div
+                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhs8cTZnuzvBwJwC7HgPhN6r-gTVLaQRqd8aTuGPqFA&s" alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a [routerLink]="['detail']" [queryParams]="{id: 2}">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Description
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">watering: frequently</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group relative" >
+                    <div
+                        class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThhs8cTZnuzvBwJwC7HgPhN6r-gTVLaQRqd8aTuGPqFA&s" alt="Front of men&#039;s Basic Tee in black."
+                            class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                    </div>
+                    <div class="mt-4 flex justify-between">
+                        <div>
+                            <h3 class="text-sm text-gray-700">
+                                <a [routerLink]="['detail']" [queryParams]="{id: 2}">
+                                    <span aria-hidden="true" class="absolute inset-0"></span>
+                                    Description
+                                </a>
+                            </h3>
+                            <p class="mt-1 text-sm text-gray-500">watering: frequently</p>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- ~ -->
         </div>
     </div>
 </section>

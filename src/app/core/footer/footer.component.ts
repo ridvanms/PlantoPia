@@ -1,6 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import {NgForm } from '@angular/forms';
-import { ModalService } from 'src/app/shared/modal/modal.service';
+import {FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -16,26 +16,33 @@ export class FooterComponent implements OnInit {
   mySill:Boolean = false
   explore:Boolean = false
 
-  email:string = ''
+  myForm: FormGroup;
+
   constructor(
-    private modalService:ModalService
-  ){}
+    private snackModal:MatSnackBar
+  ) {
+    this.myForm = new FormGroup({
+      email: new FormControl("",[Validators.required, Validators.email])
+    })
+  }
 
   ngOnInit(): void {
     
   }
-  onSubmit(form:NgForm){
-    if(form.valid){
-      this.email = form.value.email
-      // console.log(form.value.email) //printing the email of the form
-      // alert('You subscribed successfully')
-      this.modalService.toggleModal()
-      setTimeout(()=>{
-        this.modalService.toggleModal()
-      },1200)
-     
+  onSubmit() {
+    let emailIsEmpty = this.myForm.value.email == ""?true:false
+    if (emailIsEmpty) return
+    
+    if (this.myForm.valid) {
+      this.snackModal.open("Successfully submitted!",
+        "✅",
+        { duration: 1500},
+        );
+      
+    } else {
+      this.snackModal.open("Email is not correct!","❌",{duration:1500});
     }
-    form.reset();
+    this.myForm.reset();
   }
 
   show(){
@@ -68,4 +75,5 @@ export class FooterComponent implements OnInit {
   onResize():void{
     this.isBrowserSizeSmall();
   }
+  
 }

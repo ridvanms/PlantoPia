@@ -5,11 +5,14 @@ import { Injectable } from '@angular/core';
 })
 export class ModalService {
   show:Boolean = false
-
+  constructor(
+    
+  ){}
   toggleModal(){
     this.show = !this.show
   }
   hideModal(){
     this.show = false
   }
+ 
 }

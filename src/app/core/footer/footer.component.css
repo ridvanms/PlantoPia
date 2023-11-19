@@ -71,13 +71,34 @@ body{
     .infoSectionFooter {
         display: flex;
         flex-direction: column;
+        text-align: center;
     
     }
     .infoSectionFooter p{
-        height: 3.5em;
+        height: 3.8em;
         align-items: center;
     }
     .infoSectionFooter ul li{
+        margin: 1em 0 1em;
+        border-radius: 2em;
+        box-shadow: 3px 3px rgba(1, 82, 50, 0.475) ;
     }
     
+}
+.hideInSm{
+    display: block;
+}
+.hideInLg{
+    display: none;
+}
+@media (max-width: 1030px){
+    .hideInSm{
+        display: none;
+    }
+    .hideInLg{
+        display: block;
+    }
+}
+.green{
+    color:green;
 }

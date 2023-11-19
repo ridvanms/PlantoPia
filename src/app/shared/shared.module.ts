@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SpinnerComponent } from './spinner/spinner.component';
 import { ModalComponent } from './modal/modal.component';
-
+import { MatFormFieldModule } from "@angular/material/form-field"
+import { MatInputModule  } from "@angular/material/input"
 
 
 @NgModule({
@@ -11,7 +12,9 @@ import { ModalComponent } from './modal/modal.component';
     ModalComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports:[
     SpinnerComponent,

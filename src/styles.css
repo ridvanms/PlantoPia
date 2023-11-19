@@ -15,6 +15,21 @@ body{
 }
 h2{
     color: #f1f1f1;
+    font-family: 'Courier New', Courier, monospace;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+h1 {
+  font-size: 3rem;
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: 0.05em;
+
+  color: #656565
+}
+html, body { 
+    height: 100%;
+}
+body {
+     /* margin: 0; */
+}
+.green-snackbar {
+  background-color: green
+}

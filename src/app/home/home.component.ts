@@ -13,12 +13,12 @@ export class HomeComponent implements OnInit {
     private apiService:ApiServiceService
   ){}
   ngOnInit(): void {
-    this.apiService.getAllSpecies().subscribe({
-      next:(response)=>{
-        this.species = response
-      },
-      error:(error)=>{alert(error.message)}
-    })
+    // this.apiService.getAllSpecies().subscribe({
+    //   next:(response)=>{
+    //     this.species = response
+    //   },
+    //   error:(error)=>{alert(error.message)}
+    // })
   }
   
 }

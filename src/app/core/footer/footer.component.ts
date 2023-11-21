@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.myForm.value.email = '';
   }
   onSubmit() {
     let emailIsEmpty = this.myForm.value.email == ""?true:false
@@ -41,7 +41,9 @@ export class FooterComponent implements OnInit {
       
     } else {
       this.snackModal.open("Email is not correct!","❌",{duration:1500});
+      
     }
+    this.myForm.value.email = '';
     this.myForm.reset();
   }
 

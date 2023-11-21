@@ -9,8 +9,8 @@ import {CookieService} from "ngx-cookie-service"
 })
 export class NavigationComponent implements AfterViewChecked {
   name:string = ''
-  isBrowserSizeSmall():Boolean {
-    return window.innerWidth <= 1030;
+  isBrowserSizeBig():Boolean {
+    return window.innerWidth > 1030;
   }
   constructor(
     public global_loader:GlobalLoaderService,
@@ -21,8 +21,5 @@ export class NavigationComponent implements AfterViewChecked {
      this.name = this.cookie.get('token')
  }
   
-  @HostListener("window:resize",['$event'])
-  onResize():void{
-    this.isBrowserSizeSmall();
-  }
+  
 }

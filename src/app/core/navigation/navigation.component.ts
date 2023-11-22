@@ -2,6 +2,7 @@ import { AfterViewChecked, Component,  HostListener, OnChanges } from '@angular/
 import { GlobalLoaderService } from '../global-loader/global-loader.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import {CookieService} from "ngx-cookie-service"
+import { TogglerService } from 'src/app/Services/toggler.service';
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -15,7 +16,8 @@ export class NavigationComponent implements AfterViewChecked {
   constructor(
     public global_loader:GlobalLoaderService,
     public authService:AuthService,
-    private cookie:CookieService
+    private cookie: CookieService,
+    public menuToggle:TogglerService
   ){}
  ngAfterViewChecked(): void {
      this.name = this.cookie.get('token')

@@ -39,25 +39,47 @@
                         </li>
                     </ul>
                 </li>
+                <li class="greeting">
+                    <a routerLink="/user/account">Hello,
+                        <i *ngIf="this.authService.isAuth();else isNotAuth">{{name}}</i>
+                        <ng-template #isNotAuth>
+                            <i>SignIn</i>
+                        </ng-template>
+                    </a>
                 
+                </li>
                 
             
-                <li>
-                        <a routerLink="/user/account">Hello,
-                            <i *ngIf="this.authService.isAuth();else isNotAuth">{{name}}</i>
-                            <ng-template #isNotAuth>
-                                <i>SignIn</i>
-                            </ng-template>
-                        </a>
-                        <span *ngIf="this.authService.isAuth()">My Account</span>
-                </li>
+                
                
             </ul>
-            <li class="hamburger">
-                <a href="#">
+            <button (click)="this.menuToggle.mobileToggler()" class="hamburger "
+            [ngClass]="{'is-active':this.menuToggle.toggleMobileNav}">
                     <div class="bar"></div>
-                </a>
-            </li>
+            </button>
+            <div
+             (click)="this.menuToggle.mobileToggler()"
+             class="mobile-nav is-active"
+             [ngClass]="{'is-active':this.menuToggle.toggleMobileNav}"
+             >
+                <ul>
+                    <li>
+                        <a routerLink="/">Home</a>
+                    </li>
+                    <li>
+                        <a routerLink="user/login">My Account</a>
+                    </li>
+                    <li>
+                        <a href="#">Plant Care</a>
+                    </li>
+                    <li>
+                        <a href="#">More</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </div>
         
           

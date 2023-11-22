@@ -11,11 +11,12 @@ h1{
     src:url("./assets/fonts/Beston - Backup.ttf")
 } */
 body{
-    background-color: rgba(0, 0, 0, 0.085);
+    background-color: rgba(0, 0, 0, 0.15);
     user-select: none;
 }
 h2{
     font-family:'Times New Roman', Times, serif;
+    
  }
 
 h1 {
@@ -29,12 +30,13 @@ html, body {
 }
 body {
      /* margin: 0; */
+     overflow-x: hidden;
 }
 .green-snackbar {
   background-color: green
 }
   
-@media (max-width: 1030px){
+@media (max-width: 750px){
     .forBigScreen a,
     .forBigScreen span{display: none;}
 }

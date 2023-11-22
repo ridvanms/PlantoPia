@@ -43,120 +43,19 @@
 }
 
 
-/* ! downPart */
-.downPart{
-    
-    margin:1vh;
-    
-    width:100%
-}
-.downPart ul{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    width: 100%;
-    
-}
-.downPart ul li{
-    margin:1vw;
-}
 
-.downPart a {
-    text-decoration: none;
-    position: relative;
-    transition: all 1s ease-in-out;
-    font-size: 1.2rem;
-}
-
-.downPart a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #ffffdd;
-    transition: width 0.5s ease-in-out;
-}
-
-.downPart a:hover:after {
-    width: 100%;
-}
-
-
-
-
-/* !Others */
-
-
-
-
-hr{
-    width:100%
-}
-
-/* ! */
 
 
 .inSmallScreen{
-    display: none;
-    
+    display: none; 
 }
 .greeting a{
-    
     padding-left: 1rem;
     padding-right: 1rem;
     transform:translateX(10%)
 }
 
-.inBigScreen{
-    display: flex;
-}
-/* NOTE on mini size */
-.shopMenu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    width:50%
-}
-.fromShopMenu ul li{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
 
-    margin-top: 1.5em;
-    
-    height: 2.5em;
-    align-items: center;
-}
-
-.resourcesMenu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-}
-.fromResourceMenu{
-    display: flex;
-    flex-direction:column;
-}
-.fromResourceMenu ul{
-    margin: 0.5em;
-}
-.fromResourceMenu ul h1{
-    font-size: 1.5em;
-}
-.fromResourceMenu ul a{
-    
-    display: flex;
-    flex-direction:row;
-    justify-content: space-between;
-
-    height: 2em;
-    margin-top:1em;
-    margin-bottom:1em;
-}
 
 .fromResourceMenu ul a div{
     display: flex;
@@ -169,49 +68,10 @@ hr{
 svg{
     opacity: 0.5;
 }
-
-.nav hr{
-    display: block;
-}
 .hideOnSmall{
     display: block;
 }
-/* .hamburger button{
-    padding: 0;
-    width: 37px;
-    height: 37px;
-    display: flex;
-    border-radius: 50%;
-    background-color: #a1c579;
-    backdrop-filter: (10px);
-    -webkit-backdrop-filter: (10px);
-    justify-content: center;
-    align-items: center;
-}
-.hamburger .bar{
-    position:relative;
-    width: 52%;
-    height: 1.3px;
-    background-color: white;
-    border-radius: 2px;
-}
-.hamburger .bar::before, .hamburger .bar::after{
-    content:"";
-    position:absolute;
-    transform: translateX(-50%);
-    left:50%;
-    width:60%;
-    height:100%;
-    background-color:inherit;
-    border-radius:2px;
-    transition: 0.4s;
-}
-.hamburger .bar::before{
-    top:-4.5px;
-}
-.hamburger .bar::after{
-    top:4.5px;
-} */
+
 .hamburger{
     position:relative;
     display: block;
@@ -298,18 +158,9 @@ svg{
         width: 100%;
         height: 40px;
     }
-    .nav hr{
-        display: none;
-    }
-    .downPart{
-        
-    justify-content:center;
-    }
-    .inSmallScreen ul{
-        display: flex;
-        justify-content: center;
-        flex-direction:column;
-    }
+    
+    
+    
 
     .inBigScreen{
         display: none;
@@ -317,19 +168,11 @@ svg{
     /* span{
         font-size:x-small;
     } */
-    .downPart{
-        height: 10vh;
-    }
+    
     
     .upperPart ul li{
         margin-right:1em;
     }
-    .downPart li:hover{
-    /* transform: skewY(5deg); */
-    transform: skew(0);
-
-}
-
 }
 button{
     display: flex;
@@ -426,25 +269,8 @@ button{
     width:100%;
     height: 65%;
 }
-.subtotals{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-    font-size: smaller;
 
-    width: 100%;
-    height: 10%;
-}
-.shipping{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    font-size: smaller;
-    width: 100%;
-    height: 10%;
-}
 .cartBody input{
     background-color: #2c542f8f;
     border-radius: 5em;

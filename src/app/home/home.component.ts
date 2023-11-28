@@ -17,7 +17,9 @@ export class HomeComponent implements OnInit {
       next:(response)=>{
         this.species = response
       },
-      error:(error)=>{alert(error.message)}
+      error: (error) => {
+        console.log(`Error: Could not load the data!`)
+      }
     })
   }
   

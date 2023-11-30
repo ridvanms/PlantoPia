@@ -42,9 +42,10 @@ header{
 }
 
 .title{
-  font-size: 5rem;
+  font-size: 6rem;
   color:#ffffdd;
   font-weight: 800;
+  font-family: 'Courier New', Courier, monospace;
   text-shadow: 20px 25px #ffffdd4d;
   letter-spacing: 3px;
   text-transform: uppercase;

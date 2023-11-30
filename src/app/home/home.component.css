@@ -2,8 +2,6 @@
   height: 100dvh;
   overflow:hidden;
   perspective: 10px;
-  border-radius: 1em;
-  box-shadow: 0 5px solid black;
 }
 .card{
   border-radius: 5px;
@@ -32,18 +30,17 @@ header{
 
 .plant{
   position: absolute;
-  bottom:-20%;
+  top:70%;
   left:90%;
-  transform:translateZ(-5px) scale(1.5)
-  }
-
-.plant3{
+  transform: rotate(-45deg) scale(2.5);  
+}
+.plant1{
   position: absolute;
-  bottom:-25%;
-  left: 0;
-  transform:translateZ(-6px) scale(1.6);
-  transform:translate(-50%);
-  }
+  top:70%;
+  left:-15%;
+  transform: rotate(45deg) scale(1.5);
+}
+
 .title{
   font-size: 5rem;
   color:#ffffdd;
@@ -82,11 +79,30 @@ header{
   }
 }
 /* adding title animaiton */
-
+.card img{
+  opacity: 50%;
+  
+  animation:fade  2s forwards ease 
+}
+@keyframes fade {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 @media (max-width: 1030px){
   .title{
     font-size:4rem
   }
+  
 }
 
 

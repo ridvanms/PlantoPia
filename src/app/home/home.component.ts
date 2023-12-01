@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     window.addEventListener('scroll', () => {
       const value = window.scrollY;
-      
       title.style.marginTop = value  + "px";
       plant.style.marginLeft = value  + "px";
       plant1.style.marginLeft = -(value ) + "px";

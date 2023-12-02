@@ -1,0 +1,122 @@
+.aboutSection{
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/1487010/pexels-photo-1487010.jpeg?cs=srgb&dl=pexels-james-wheeler-1487010.jpg&fm=jpg");
+  background-size: cover;
+  filter: blur(10);
+  overflow: hidden;
+  
+}
+.about-title{
+  width: 45%;
+  height: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  border-radius: 3em;
+  z-index: 1;
+  
+}
+.about-title h1{
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffdd;
+  
+}
+.about-dec1{
+  position: absolute;
+  
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1fb6;
+  transform: rotate(-45deg) scale(1.5);
+  border-radius: 2em;
+  margin-top:1em;
+  z-index: -1;
+}
+.about-content{
+  width: 45%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1fa6;
+  color:#fffddc;
+  border: 2px 20px 2px solid  #a1c759;
+  border-radius: 2em;
+  
+}
+
+.about-content h2{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+.about-content p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.about-content button{
+  font-size: 5rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  
+}
+.pages{
+  position: relative;
+  
+
+
+}
+.about-page1{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-page2{
+  display: none;
+  background-color: #1f1f1f5a;
+}
+@media (max-width:1030px){
+  .aboutSection{
+    height: 200dvh;
+    display: flex;
+    flex-direction: column;
+  }
+  .about-title{
+    width: 100%;
+    height: 100dvh;
+  }
+  .about-title h1{
+    font-size: 3rem;
+  }
+  .about-content{
+    width: 95%;
+    height: 110dvh;
+  }
+  .about-page1{
+    width: 95%;
+  }
+  .about-content h2{
+    font-size: 2.5rem;
+  }
+  .about-content p{
+    font-size: 0.9rem;
+  }
+  .about-dec1{
+    width: 10rem;
+    height: 10rem;
+  }
+}

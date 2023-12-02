@@ -46,6 +46,7 @@ header{
 
 .title{
   font-size: 6rem;
+  width: 90%;
   color:#ffffdd;
   font-weight: 800;
   font-family: 'Times New Roman', Times, serif;
@@ -104,7 +105,23 @@ header{
 }
 @media (max-width: 1030px){
   /*  */
-  
+  .title{
+    font-size: 3rem;
+  }
+  .plant{
+  position: absolute;
+  top:70%;
+  left:80%;  
+  z-index: 2;
+  pointer-events: none;
+}
+.plant1{
+  position: absolute;
+  top:70%;
+  left:-35%;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
 }
 
 

@@ -1,24 +1,28 @@
 .aboutSection{
   height: 100dvh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-image: url("https://images.pexels.com/photos/1487010/pexels-photo-1487010.jpeg?cs=srgb&dl=pexels-james-wheeler-1487010.jpg&fm=jpg");
   background-size: cover;
-  filter: blur(10);
-  overflow: hidden;
+}
+.about-wrapper{
+  display: flex;
+  flex-wrap:wrap;
   
+  justify-content: space-evenly;
+  width: 95%;
 }
 .about-title{
-  width: 45%;
-  height: 50%;
+  width: 30%;
+  height: 16rem;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  margin: 1em 0 1em ;
   border-radius: 3em;
+  
   z-index: 1;
   
 }
@@ -26,57 +30,67 @@
   font-size: 5rem;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: transparent;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #ffffdd;
-  
+  color: #a1c579;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1f1f1f;
+  transform: skew(5deg, 5deg) scale(0);
+  animation: scale 2s forwards cubic-bezier(0.5,1,0.89,1);
+
+}
+@keyframes scale {
+  100%{
+    transform:skew(10deg, 10deg) scale(1);
+  }
 }
 .about-dec1{
   position: absolute;
   
-  width: 16rem;
-  height: 16rem;
+  width: 26rem;
+  height: 26rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #1f1f1fb6;
-  transform: rotate(-45deg) scale(1.5);
+  /* transform: rotate(-45deg) scale(1.5); */
   border-radius: 2em;
-  margin-top:1em;
+  border: 5px solid #fffddc;
+  transform: skew(10deg, 10deg) scale(0);
+  animation: scale 2s forwards ease;
   z-index: -1;
+  background-image: url("../../../assets/images/about-font.jpg");
+  background-size: cover;
 }
 .about-content{
-  width: 45%;
-  height: 50%;
+  width: 55%;
+  height: 16rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #1f1f1fa6;
   color:#fffddc;
-  border: 2px 20px 2px solid  #a1c759;
+  padding: 1em 0 1em ;
   border-radius: 2em;
+  margin-top: 2em;
+  
   
 }
 
 .about-content h2{
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 .about-content p{
   font-family:Georgia, 'Times New Roman', Times, serif;
 }
 .about-content button{
-  font-size: 5rem;
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  
+  font-size: 1.5rem;
 }
 .pages{
-  position: relative;
   
-
-
 }
 .about-page1{
   width: 80%;
@@ -98,25 +112,28 @@
   .about-title{
     width: 100%;
     height: 100dvh;
+    margin: 2em 0 1em ;
+
   }
   .about-title h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
   .about-content{
     width: 95%;
-    height: 110dvh;
+    height: 100dvh;
+    margin-bottom: 2em;
   }
   .about-page1{
     width: 95%;
   }
   .about-content h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .about-content p{
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .about-dec1{
-    width: 10rem;
-    height: 10rem;
+    width: 16rem;
+    height: 13rem;
   }
 }

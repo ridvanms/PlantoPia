@@ -46,7 +46,7 @@
   position: absolute;
   
   width: 26rem;
-  height: 26rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,19 +62,19 @@
 }
 .about-content{
   width: 55%;
-  height: 16rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #1f1f1fa6;
+  background-color: #1f1f1fac;
   color:#fffddc;
   padding: 1em 0 1em ;
   border-radius: 2em;
   margin-top: 2em;
-  
-  
+  z-index: 2;
 }
+
 
 .about-content h2{
   font-weight: bold;
@@ -83,11 +83,20 @@
 }
 .about-content p{
   font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size:1.2rem;
 }
 .about-content button{
   margin-right: 0.5rem;
   margin-left: 0.5rem;
-  font-size: 1.5rem;
+}
+.about-btn1{
+  
+}
+.about-btn2{
+  font-size:2.5rem;
+}
+.about-btn3{
+
 }
 .pages{
   
@@ -105,7 +114,7 @@
 }
 @media (max-width:1030px){
   .aboutSection{
-    height: 200dvh;
+    height: 220dvh;
     display: flex;
     flex-direction: column;
   }

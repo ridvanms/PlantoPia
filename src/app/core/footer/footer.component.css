@@ -1,8 +1,8 @@
-body{
 
-    background-color: #F9A826;
+footer{
+    overflow: hidden;
+    scroll-behavior: none;
 }
-
 .rows{
     
     height: 100%;

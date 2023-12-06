@@ -1,8 +1,8 @@
+body{
 
-footer{
-    overflow: hidden;
-    scroll-behavior: smooth;
+    background-color: #F9A826;
 }
+
 .rows{
     
     height: 100%;

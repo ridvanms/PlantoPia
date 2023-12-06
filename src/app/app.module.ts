@@ -19,6 +19,7 @@ import { PlantGuideModule } from './plant-guide/plant-guide.module';
 import { ApiServiceService } from './Services/api-service.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
     HttpClientModule,
     PlantGuideModule,
     BrowserAnimationsModule,
+    PagesModule
   ],
   providers: [
     AuthService,

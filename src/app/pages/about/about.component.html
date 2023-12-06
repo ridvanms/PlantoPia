@@ -1,33 +1,23 @@
 <section class="aboutSection">
-  <div class="about-wrapper">
-    <div class="about-title">
-    <div class="about-dec1"></div>
-    <h1>About us</h1>
-  </div>
-  <div class="about-content">
-    <div class="about-page1">
-      <h2>Our Mission</h2>
-      <p>We understand the importance of effective marketing strategies in reaching a wider
-      audience. Our marketing approach combines the best traditional and digital strategies to create a holistic and
-      engaging experience for our customers. Through captivating visuals, informative content, and interactive social media
-      campaigns, we aim to inspire and educate our audience about the wonders of plants.</p>
-      
+  <div class="aboutParantWrapper">
+
+    <div class="about-wrapper">
+      <div #titleAbout class="about-title">
+        <h1 >About us</h1>
+      </div>
     </div>
-    <div class="about-page2">
-      <h2>What We Offer</h2>
-      <p>We provide a wide variety of high-quality plants, carefully curated to cater to different tastes and preferences.
-        Whether you're a seasoned plant enthusiast or a beginner looking to add some greenery to your space, we have the
-        perfect plant for you. Our inventory includes indoor plants, outdoor plants, succulents, flowers, and more. We also
-        offer plant care products and accessories to ensure your plants thrive.</p>
-    </div>
-    <div class="pages">
-      <button class="about-btn1"><</button>
-      <button class="about-btn2">1</button>
-      <button class="about-btn3">></button>
+    <div #aboutContent class="about-content">
+      <div  class="about-page1">
+        <h2>{{content[currentPage - 1].title}}</h2>
+        <p>{{content[currentPage - 1].text}}</p>
+      </div>
+      <div class="pages">
+        <button  [disabled]="currentPage == 1" (click)="prev()" class="about-btn1" [ngClass]="{'noMorePages': currentPage == 1}"><</button>
+        <button class="about-btn2">{{currentPage}}</button>
+        <button [disabled]="currentPage == havePages" (click)="next()" class="about-btn3" [ngClass]="{'noMorePages': currentPage == havePages}">></button>
+      </div>
     </div>
   </div>
-  </div>
-  
 </section>
 <!-- <section class="about-header">
   <div class="about-container">

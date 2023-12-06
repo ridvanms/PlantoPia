@@ -1,19 +1,21 @@
-import { Component, OnInit,AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit,AfterViewInit, ViewChild, ElementRef, OnDestroy } from '@angular/core';
 import { ApiServiceService } from '../Services/api-service.service';
+import { ScrollPositionServiceService } from '../Services/scroll-position-service.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit,OnDestroy {
    @ViewChild('plant', { static: true }) plant!: ElementRef;
   @ViewChild('plant1', { static: true }) plant1!: ElementRef;
   @ViewChild('title', { static: true }) title!: ElementRef;
   species:any;
 
   constructor(
-    private apiService:ApiServiceService
+    private apiService: ApiServiceService,
+    private scrollService:ScrollPositionServiceService
   ){}
   ngOnInit(): void {
     this.apiService.getAllSpecies().subscribe({
@@ -30,13 +32,19 @@ export class HomeComponent implements OnInit, AfterViewInit {
     const plant1 = this.plant1?.nativeElement
     const title = this.title?.nativeElement
 
-    window.addEventListener('scroll', () => {
+    const scrollHandler = () => {
       const value = window.scrollY;
       title.style.marginTop = value  + "px";
       plant.style.marginLeft = value  + "px";
       plant1.style.marginLeft = -(value ) + "px";
       
-    })
+    }
+    window.addEventListener('scroll', scrollHandler);
+
+    this.scrollService.setScrollHandler(scrollHandler);
+  }
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.scrollService.getScrollHandler());
   }
   
 }

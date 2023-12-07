@@ -27,6 +27,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   havePages: number = 2;
 
   @ViewChild('titleAbout', { static: true }) titleAbout!: ElementRef;
+  @ViewChild('aboutContent', { static: true }) aboutContent!: ElementRef;
   constructor(
     private scrollService:ScrollPositionServiceService
   ) {
@@ -36,11 +37,13 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   }
   ngAfterViewInit(): void {
     const title = this.titleAbout?.nativeElement
-
+    const contest = this.aboutContent?.nativeElement
     const scrollHandler = () => {
+      
       const value = window.scrollY;
-      title.style.marginTop = -value * 1.5 + "px"
-      console.log(value)
+      
+      title.style.marginTop = -value  + "px"
+      contest.style.marginTop = -value  + "px"
     }
     window.addEventListener('scroll', scrollHandler);
     this.scrollService.setScrollHandler(scrollHandler);

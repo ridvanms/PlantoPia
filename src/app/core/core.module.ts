@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
     SharedModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   exports:[
     GlobalLoaderComponent,

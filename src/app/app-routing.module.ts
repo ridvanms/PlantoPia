@@ -20,8 +20,8 @@ const routes: Routes = [
     loadChildren : () => import('./account/account.module').then((m) => m.AccountModule)
   },
   {
-    path:'about',
-    component:AboutComponent
+    path:'page',
+    loadChildren: () => import("./pages/pages.module").then((m) => m.PagesModule)
   },
   {
     path:'plantGuide',

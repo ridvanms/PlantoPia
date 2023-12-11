@@ -41,7 +41,7 @@ export class AccountService {
       },
       (error)=>{
         this.global_loader.hideLoader()
-        alert(`Error: ${error.message}`)
+        alert(`Consider modifying your desired email slightly to create a unique variation that is available!`)
       }
     )
   }

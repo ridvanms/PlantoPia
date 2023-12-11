@@ -23,14 +23,14 @@
                 </form>
         
             <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-                <a rel="noopener noreferrer" href="#" title="Email"
+                <a rel="noopener noreferrer" routerLink="**" title="Email"
                     class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                         <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                         <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                     </svg>
                 </a>
-                <a rel="noopener noreferrer" href="#" title="Twitter"
+                <a rel="noopener noreferrer" routerLink="**" title="Twitter"
                     class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-5 h-5">
                         <path
@@ -38,7 +38,7 @@
                         </path>
                     </svg>
                 </a>
-                <a rel="noopener noreferrer" href="#" title="GitHub"
+                <a rel="noopener noreferrer" routerLink="**" title="GitHub"
                     class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
                         <path
@@ -64,21 +64,21 @@
                 </p>
                 <ul *ngIf="isShown || customerService">
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">FAQ</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">FAQ</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Shipping & Handling</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Shipping & Handling</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">30-Day Guarantee</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">30-Day Guarantee</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Contact Us</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Contact Us</a>
                     </li>
                 </ul>
                 
             </div>
-            <div class="col-span-12  md:text-left md:col-span-2">
+            <div class="col-span-12   md:col-span-2">
                 <p class="pb-3 text-lg font-medium" (click)="toggle('resources')" style="display: flex;" >
                     Resources
                     <svg *ngIf="!isShown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -92,20 +92,20 @@
                 </p>
                 <ul *ngIf="isShown || resources">
                     <li class="md:pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Find Your Plant 🪴</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Find Your Plant 🪴</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Plant Care Library</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Plant Care Library</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Blog</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Blog</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Free Online Course</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Free Online Course</a>
                     </li>
                 </ul>
             </div>
-            <div class="col-span-12  md:text-left md:col-span-2">
+            <div class="col-span-12   md:col-span-2">
                 <p class="pb-3 text-lg font-medium" (click)="toggle('mySill')" style="display: flex;" >My Sill
                     <svg *ngIf="!isShown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     
@@ -119,21 +119,21 @@
                 
                 <ul *ngIf="isShown || mySill">
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">My Account</a>
+                        <a rel="noopener noreferrer" routerLink="/user/account" class="hover:dark:text-green-400">My Account</a>
                     </li >
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Workshops</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Workshops</a>
                     </li >
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Rewards Program</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Rewards Program</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Track My Order</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Track My Order</a>
                     </li>
                   
                 </ul>
             </div>
-            <div class="col-span-12  md:text-left md:col-span-2">
+            <div class="col-span-12 md:col-span-2">
                 <p class="pb-4 text-lg font-medium" (click)="toggle('explore')" style="display: flex;">Explore
                         <svg *ngIf="!isShown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                         
@@ -147,16 +147,16 @@
                 
                 <ul *ngIf="isShown || explore">
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Our Story</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Our Story</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Locations</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Locations</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Careers</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Careers</a>
                     </li>
                     <li class="pb-3">
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-green-400">Corporate Gifting</a>
+                        <a rel="noopener noreferrer" routerLink="**" class="hover:dark:text-green-400">Corporate Gifting</a>
                     </li>
                    
                 </ul>
@@ -184,14 +184,14 @@
                 </form>
             
                 <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-                    <a rel="noopener noreferrer" href="#" title="Email"
+                    <a rel="noopener noreferrer" routerLink="**" title="Email"
                         class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
                             <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                             <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                         </svg>
                     </a>
-                    <a rel="noopener noreferrer" href="#" title="Twitter"
+                    <a rel="noopener noreferrer" routerLink="**" title="Twitter"
                         class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor" class="w-5 h-5">
                             <path
@@ -199,7 +199,7 @@
                             </path>
                         </svg>
                     </a>
-                    <a rel="noopener noreferrer" href="#" title="GitHub"
+                    <a rel="noopener noreferrer" routerLink="**" title="GitHub"
                         class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-green-400 dark:text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5">
                             <path
@@ -215,10 +215,10 @@
         <div class="grid justify-center pt-6 lg:justify-between">
             <div class="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
                 <span>©2023 All rights reserved</span>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" style="cursor: normal;">
                     <span>Privacy policy</span>
                 </a>
-                <a rel="noopener noreferrer" href="#">
+                <a rel="noopener noreferrer" style="cursor:normal">
                     <span>Terms of service</span>
                 </a>
             </div>

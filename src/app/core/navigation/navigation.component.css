@@ -6,12 +6,15 @@
     position: fixed;
     top: 0;
     z-index: 999;
+    background-color: #fffddc71;
 }
 .forBigScreen a{
-    color: #a1c579;
-    text-shadow: 2px 2px #1f1f1f;
-    -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #c6c6c6;
+    color: #1f1f1f;
+    font-size: 1.5rem;
+}
+.forBigScreen a:hover{
+    font-weight: 700;
+    color: #a1c759;
 }
 .nav ul a{
     font-size: 1.2rem;
@@ -202,7 +205,7 @@ button{
 }
 
 .content h2 {
-	color: transparent;
+	color: #fffddc;
     font-size: 2em;
     
     left:2em;
@@ -212,15 +215,11 @@ button{
 }
 
 .content h2:nth-child(1) {
-	color: transparent;
-    
-	-webkit-text-stroke: 0.2px #fffddc ;
+	color: #fffddc;
 }
 
 .content h2:nth-child(2) {
-	color: #61a3ba;
-    -webkit-text-stroke: 0.01px;
-    -webkit-text-stroke-color: #1f1f1f;
+	color: #a1c759;
 	animation: animate 4s ease-in-out infinite;
 }
 

@@ -5,9 +5,9 @@
   justify-content: center;
   scroll-behavior: smooth;
   align-items: center;
-  background-image: url("https://images.pexels.com/photos/1487010/pexels-photo-1487010.jpeg?cs=srgb&dl=pexels-james-wheeler-1487010.jpg&fm=jpg");
-  background-size: cover;
+  background-color: #fffddc53;
   overflow: hidden;
+  z-index: -2;
 }
 .aboutParantWrapper{
   height: 70dvh;
@@ -34,8 +34,28 @@
   align-items: center;
   border-radius: 3em;
   z-index: 1;
+}
+.about-title h1{
+  width: 100%;
+  height: 100%;
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3em;
+  z-index: 1;
   margin-left: -100dvh;
   animation: showTitle 2s forwards ease ;
+}
+.about-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.aboutTitle-background{
+  display: none;
 }
 
 
@@ -75,18 +95,31 @@
   opacity: 0;
   animation: showContent 1.5s both ease-in-out 1s;
 }
+@media (max-width:1030px){
+  .about-content{
+    position: absolute;
+    top:80%;
+  }
+  .about-background{
+    height: 150%;
+  }
+  .about-wrapper{
+    position: absolute;
+    top:0;
+  }
+}
 
 
 
 .about-content h2{
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   
 }
 .about-content p{
   font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size:1.2rem;
+  font-size:1.5rem;
 }
 .about-content button{
   margin-right: 0.5rem;
@@ -126,13 +159,13 @@
 
 @media (max-width:1030px){
   .aboutSection{
-    height: 220dvh;
+    height: 150dvh;
     display: flex;
     flex-direction: column;
   }
   .aboutParantWrapper{
-    height: 220dvh;
-    width: 90%;
+    height: 80dvh;
+    width: 100%;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -143,7 +176,7 @@
   }
   .about-wrapper{
     width: 100%;
-    height: 50%;
+    height: 100%;
   }
   .about-title{
     width: 100%;
@@ -155,13 +188,13 @@
   }
   .about-title h1{
     width: 100%;
-    font-size: 4rem;
-    margin-bottom: 1em;
+    font-size: 3rem;
+    margin-bottom: 2.5em;
   }
   
   .about-content{
-    width: 95%;
-    height: 100dvh;
+    width: 99%;
+    height: 100%;
   }
   .about-page1{
     width: 90%;
@@ -170,7 +203,7 @@
     font-size: 2rem;
   }
   .about-content p{
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
  
 }

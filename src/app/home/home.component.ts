@@ -34,9 +34,9 @@ export class HomeComponent implements OnInit, AfterViewInit,OnDestroy {
 
     const scrollHandler = () => {
       const value = window.scrollY;
-      title.style.marginTop = value  + "px";
-      plant.style.marginLeft = value  + "px";
-      plant1.style.marginLeft = -(value ) + "px";
+      title.style.marginTop = value * 2.5  + "px";
+      plant.style.marginTop = (value/3)  + "px";
+      plant1.style.marginTop = (value/3) +"px";
       
     }
     window.addEventListener('scroll', scrollHandler);

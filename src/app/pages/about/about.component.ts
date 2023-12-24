@@ -27,6 +27,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
   havePages: number = 2;
 
   @ViewChild('titleAbout', { static: true }) titleAbout!: ElementRef;
+  @ViewChild('imageAbout', { static: true }) imageAbout!: ElementRef;
   @ViewChild('aboutContent', { static: true }) aboutContent!: ElementRef;
   constructor(
     private scrollService:ScrollPositionServiceService
@@ -42,7 +43,7 @@ export class AboutComponent implements OnInit, AfterViewInit, OnDestroy {
       
       const value = window.scrollY;
       
-      title.style.marginTop = -value  + "px"
+      title.style.marginTop = -value * 2.5 + "px"
       contest.style.marginTop = -value  + "px"
     }
     window.addEventListener('scroll', scrollHandler);
